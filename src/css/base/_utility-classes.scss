@@ -1,0 +1,47 @@
+@use '../abstract' as *;
+
+.ff-primary {
+  font-family: var(--ff-primary);
+}
+
+// colors
+@each $color, $shades in $colors {
+  @each $shade, $value in $shades {
+    .bg-#{$color}-#{$shade} {
+      background-color: var(--clr-#{$color}-#{$shade});
+    }
+    .text-#{$color}-#{$shade} {
+      color: var(--clr-#{$color}-#{$shade});
+    }
+  }
+}
+// typography
+@each $fontSize, $value in $fontSizes {
+  .fs-#{$fontSize} {
+    font-size: var(--fs-#{$fontSize});
+    line-height: calc(1.5 * var(--fs-#{$fontSize}));
+  }
+}
+@each $fontWeight in $fontWeights {
+  .fw-#{$fontWeight} {
+    font-weight: #{$fontWeight};
+  }
+}
+
+.container {
+  --container-padding: 2rem;
+  --max-width: 1440px;
+  width: min(var(--max-width), 100% - var(--container-padding));
+  height: 100%;
+  margin-inline: auto;
+}
+
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}

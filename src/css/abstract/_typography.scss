@@ -1,0 +1,13 @@
+$fontFamilyPrimary: 'Rubik';
+$fontSizes: (
+  100: clamp(0.51rem, 0.09vw + 0.49rem, 0.58rem),
+  200: clamp(0.64rem, 0.11vw + 0.62rem, 0.72rem),
+  300: clamp(0.8rem, 0.14vw + 0.77rem, 0.9rem),
+  400: clamp(1rem, 0.18vw + 0.96rem, 1.13rem),
+  500: clamp(1.25rem, 0.22vw + 1.21rem, 1.41rem),
+  600: clamp(1.56rem, 0.28vw + 1.51rem, 1.76rem),
+  700: clamp(1.95rem, 0.35vw + 1.88rem, 2.2rem),
+  800: clamp(2.44rem, 0.44vw + 2.35rem, 2.75rem),
+  900: clamp(3.05rem, 0.54vw + 2.94rem, 3.43rem),
+);
+$fontWeights: (300, 400, 500, 600, 700, 800);

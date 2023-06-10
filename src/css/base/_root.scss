@@ -1,0 +1,18 @@
+@use '../abstract' as *;
+
+:root {
+  // colors
+  @each $color, $shades in $colors {
+    @each $shade, $value in $shades {
+      --clr-#{$color}-#{$shade}: #{$value};
+    }
+  }
+  // typography
+  --ff-primary: '#{$fontFamilyPrimary}', sans-serif;
+  @each $fontSize, $value in $fontSizes {
+    --fs-#{$fontSize}: #{$value};
+  }
+  @each $fontWeight in $fontWeights {
+    --fw-#{$fontWeight}: #{$fontWeight};
+  }
+}

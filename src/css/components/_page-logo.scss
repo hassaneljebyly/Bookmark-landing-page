@@ -1,0 +1,15 @@
+svg * {
+  transition: fill 150ms ease 150ms;
+}
+.page-logo {
+  width: fit-content;
+  --text-path-fill: var(--clr-neutral-dark-500);
+  --circle-fill: var(--clr-primary-blue-200);
+  --path-fill: #ffffff;
+}
+
+.open .page-logo {
+  --text-path-fill: #ffffff;
+  --circle-fill: #ffffff;
+  --path-fill: var(--clr-neutral-dark-500);
+}
