@@ -1,0 +1,8 @@
+header {
+  --header-padding-block: 1em;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  top: 0;
+  padding-block: var(--header-padding-block);
+}

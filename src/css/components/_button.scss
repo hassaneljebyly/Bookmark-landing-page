@@ -1,22 +1,95 @@
-button {
+@use '../abstract/mixins' as *;
+body {
+  background-color: rgba(41, 23, 206, 0.555);
+}
+.button {
+  --border-color: transparent;
+  --background-color: var(--clr-primary-blue-200);
+  --text-color: var(--clr-neutral-dark-100);
+  --click-animation-duration: 320ms;
+  //
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--border-color);
+  border-radius: 5px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  min-width: 90px;
+  padding: 1em;
+  line-height: 0;
   cursor: pointer;
-  border: 0;
-  outline: 0;
-  background-color: transparent;
+  transition: color 150ms ease-in, background-color 150ms ease-in;
+  overflow: hidden;
+  position: relative;
+  box-shadow: var(--background-color) 0px 2px 2px -1px;
+  &--red {
+    --background-color: var(--clr-primary-red-200);
+    --border-color: var(--clr-primary-red-200);
+  }
+  &--blue {
+    --background-color: var(--clr-primary-blue-200);
+    --border-color: var(--clr-primary-blue-200);
+  }
+  &--gray {
+    --background-color: var(--clr-neutral-gray-100);
+    --text-color: var(--clr-neutral-gray-400);
+    &:hover:not(:disabled) {
+      --border-color: var(--clr-neutral-gray-400);
+    }
+  }
+  &:hover:not(:disabled) {
+    --background-color: var(--clr-neutral-dark-100);
+    --text-color: var(--border-color);
+  }
+  &--login-desktop {
+    display: none;
+    @include mq(min, small) {
+      display: block;
+    }
+  }
+  &--login-mobile {
+    @include mq(min, small) {
+      display: none;
+    }
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: var(--main-nav-ls);
+    box-shadow: none;
+    &:hover {
+      background-color: white;
+      color: var(--clr-neutral-dark-600);
+    }
+  }
+  &:disabled {
+    cursor: not-allowed;
+  }
+  &::before {
+    --scale-value: 0;
+    content: '';
+    position: absolute;
+    width: 50px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    top: var(--top);
+    left: var(--left);
+    background-color: var(--border-color);
+    opacity: 0;
+    transform-origin: center center;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  &--clicked::before {
+    animation: scaleUp var(--click-animation-duration) ease-in-out 0s forwards;
+  }
 }
 
-.button {
-  --border-color: var(--clr-neutral-dark-100);
-  border-radius: 5px;
-  padding-block: 0.5em;
-  padding-inline: 2em;
-  border-width: 2px;
-  border-color: var(--border-color);
-  border-style: solid;
-  &--login {
-    width: 100%;
-    color: var(--border-color);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
+@keyframes scaleUp {
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(4);
   }
 }

@@ -3,7 +3,7 @@ svg * {
 }
 .page-logo {
   width: fit-content;
-  --text-path-fill: var(--clr-neutral-dark-500);
+  --text-path-fill: var(--clr-neutral-dark-600);
   --circle-fill: var(--clr-primary-blue-200);
   --path-fill: #ffffff;
 }
@@ -11,5 +11,5 @@ svg * {
 .open .page-logo {
   --text-path-fill: #ffffff;
   --circle-fill: #ffffff;
-  --path-fill: var(--clr-neutral-dark-500);
+  --path-fill: var(--clr-neutral-dark-600);
 }
