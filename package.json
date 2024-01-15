@@ -1,0 +1,40 @@
+{
+  "name": "bookmark-landing-page",
+  "version": "1.0.0",
+  "description": "This is a solution to the Bookmark landing page challenge on Frontend Mentor",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "postcss src/styles/main.css -o public/styles/main.min.css --watch",
+    "compile:scss": "sass --watch --no-source-map src/styles/sass/main.scss src/styles/main.css",
+    "Dev": "npm run compile:scss && npm run build:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hassaneljebyly/Bookmark-landing-page.git"
+  },
+  "keywords": [
+    "landing-page",
+    "bookmark",
+    "css",
+    "scss",
+    "javascript",
+    "frontendmentor"
+  ],
+  "author": "hassan el jebyly",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hassaneljebyly/Bookmark-landing-page/issues"
+  },
+  "homepage": "https://github.com/hassaneljebyly/Bookmark-landing-page#readme",
+  "browserslist": [
+    "last 4 version"
+  ],
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "cssnano": "^6.0.3",
+    "postcss": "^8.4.33",
+    "postcss-assets": "^6.0.0",
+    "postcss-cli": "^11.0.0",
+    "sass": "^1.69.7"
+  }
+}
