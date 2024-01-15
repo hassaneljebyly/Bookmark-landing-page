@@ -419,5 +419,5 @@
 }
 
 body {
-  background-image: url("../../../public/assets/illustration-features-tab-2.svg");
+  background-image: resolve("illustration-features-tab-2.svg");
 }
