@@ -1,6 +1,4 @@
 @use './base/' as *;
 @use './utilities/' as *;
-
-body {
-  background-image: resolve("illustration-features-tab-2.svg");
-}
+@use "./layout/" as *;
+@use "./components/" as *;

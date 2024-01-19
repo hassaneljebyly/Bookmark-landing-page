@@ -35,6 +35,7 @@
     "postcss": "^8.4.33",
     "postcss-assets": "^6.0.0",
     "postcss-cli": "^11.0.0",
+    "postcss-combine-media-query": "^1.0.1",
     "sass": "^1.69.7"
   }
 }

@@ -56,6 +56,10 @@ a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 
+button {
+  cursor: pointer;
+}
+
 /* Make images easier to work with */
 img,
 picture,
