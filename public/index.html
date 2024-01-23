@@ -17,11 +17,12 @@
   </head>
   <!-- 
     TODO: skip home link
+    TODO: focus style for accessibility 
    -->
 
   <body class="ff-p bg-n-990-gb">
     <!-- HEADER -->
-    <header class="header header--primary bg-n-990-gb">
+    <header class="header header--primary bg-n-990-gb" id="primary_header">
       <div class="container header__container">
         <nav class="nav nav--primary" aria-label="Primary" id="primary_nav">
           <a class="nav__link" aria-current="page" href="/public">
@@ -44,8 +45,7 @@
             <li class="nav__list-item"><a class="nav__link" href="#" class="">Features</a></li>
             <li class="nav__list-item"><a class="nav__link" href="#" class="">Pricing</a></li>
             <li class="nav__list-item"><a class="nav__link" href="#" class="">Contact</a></li>
-            <li class="nav__list-item"><button class="nav__list-item--btn"><a class="nav__link" href="#"
-                  class="">Login</a></button></li>
+            <li class="nav__list-item"><a class="nav__link nav__link--btn" href="#" class="">Login</a></li>
           </ul>
           <div class="nav__btn-group" id="menu_btn">
             <button class="nav__btn nav__btn--open">
@@ -86,16 +86,110 @@
         </nav>
       </div>
     </header>
+    <main class="main">
+      <section class="hero main__hero">
+        <div class="container main__hero-container">
+          <div class="hero__content">
+            <h1 class="hero__title | fs-p-800 fw-p-bold text-n-200-db">A Simple Bookmark Manager</h1>
+            <p class="hero__body | fs-p-500 text-n-700-gb">
+              A clean and simple interface to organize your favourite websites. Open a new
+              browser tab and see your sites load instantly. Try it for free.
+            </p>
+            <div class="hero__cta-group">
+              <a href="#" class="hero__cta hero__cta--chrome | fs-p-400 text-n-990-gb bg-p-600-sb">Get it on Chrome</a>
+              <a href="#" class="hero__cta hero__cta--firefox | fs-p-400 text-n-400-gb bg-n-900-gb">Get it on
+                Firefox</a>
+            </div>
+          </div>
+          <div class="hero__illustration">
+            <svg xmlns="http://www.w3.org/2000/svg" width="750" viewBox="0 0 750 493">
+              <g transform="translate(-9 -644)">
+                <g transform="translate(9 644)" fill="#393939" stroke="#777" stroke-width="2">
+                  <rect width="750" height="493" rx="26" stroke="none" />
+                  <rect x="1" y="1" width="748" height="491" rx="25" fill="none" />
+                </g>
+                <rect width="697" height="439" rx="13" transform="translate(36 671)" fill="#e8eaf6" />
+                <path d="M8,0H331a8,8,0,0,1,8,8V328a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V8A8,8,0,0,1,8,0Z"
+                  transform="translate(110 782)" fill="#fff" />
+                <path d="M8,0H158a8,8,0,0,1,8,8V328a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V8A8,8,0,0,1,8,0Z"
+                  transform="translate(493 782)" fill="#fff" />
+                <path d="M13,0H684a13,13,0,0,1,13,13V78a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V13A13,13,0,0,1,13,0Z"
+                  transform="translate(36 671)" fill="#5267df" />
+                <ellipse cx="20.5" cy="21" rx="20.5" ry="21" transform="translate(65 689)" fill="#7c8ce7" />
+                <ellipse cx="20.5" cy="21" rx="20.5" ry="21" transform="translate(663 689)" fill="#7c8ce7" />
+                <g transform="translate(126.417 701.087)">
+                  <line x2="149.204" transform="translate(0 0)" fill="none" stroke="#d4d9f7" stroke-linecap="round"
+                    stroke-width="6" />
+                  <line x2="76.548" transform="translate(0 18.164)" fill="none" stroke="#7e8de7" stroke-linecap="round"
+                    stroke-width="6" />
+                </g>
+                <g transform="translate(150.42 822.652)">
+                  <circle cx="20.759" cy="20.759" r="20.759" transform="translate(0 0)" fill="#f98e5d" />
+                  <g transform="translate(63.545 11.677)">
+                    <line x2="149.204" fill="none" stroke="#9194a1" stroke-linecap="round" stroke-width="6" />
+                    <line x2="76.548" transform="translate(0 18.164)" fill="none" stroke="#c8c9d0"
+                      stroke-linecap="round" stroke-width="6" />
+                  </g>
+                </g>
+                <g transform="translate(150.42 895.308)">
+                  <circle cx="20.759" cy="20.759" r="20.759" transform="translate(0 0)" fill="#6ac6d6" />
+                  <g transform="translate(63.545 11.677)">
+                    <line x2="149.204" fill="none" stroke="#9194a1" stroke-linecap="round" stroke-width="6" />
+                    <line x2="76.548" transform="translate(0 18.164)" fill="none" stroke="#c8c9d0"
+                      stroke-linecap="round" stroke-width="6" />
+                  </g>
+                </g>
+                <g transform="translate(150.42 967.964)">
+                  <circle cx="20.759" cy="20.759" r="20.759" transform="translate(0 0)" fill="#a47ed4" />
+                  <g transform="translate(63.545 11.677)">
+                    <line x2="149.204" fill="none" stroke="#9194a1" stroke-linecap="round" stroke-width="6" />
+                    <line x2="76.548" transform="translate(0 18.164)" fill="none" stroke="#c8c9d0"
+                      stroke-linecap="round" stroke-width="6" />
+                  </g>
+                </g>
+                <g transform="translate(150.42 1040.62)">
+                  <circle cx="20.759" cy="20.759" r="20.759" transform="translate(0 0)" fill="#ec7878" />
+                  <g transform="translate(63.545 11.677)">
+                    <line x2="149.204" fill="none" stroke="#9194a1" stroke-linecap="round" stroke-width="6" />
+                    <line x2="76.548" transform="translate(0 18.164)" fill="none" stroke="#c8c9d0"
+                      stroke-linecap="round" stroke-width="6" />
+                  </g>
+                </g>
+                <line x2="104.472" transform="translate(524.079 814.219)" fill="none" stroke="#c8c9d0"
+                  stroke-linecap="round" stroke-width="6" />
+                <line x2="104.472" transform="translate(524.079 838.87)" fill="none" stroke="#c8c9d0"
+                  stroke-linecap="round" stroke-width="6" />
+                <line x2="104.472" transform="translate(524.079 863.521)" fill="none" stroke="#c8c9d0"
+                  stroke-linecap="round" stroke-width="6" />
+                <line x2="104.472" transform="translate(524.079 888.172)" fill="none" stroke="#c8c9d0"
+                  stroke-linecap="round" stroke-width="6" />
+                <line x2="104.472" transform="translate(524.079 912.823)" fill="none" stroke="#c8c9d0"
+                  stroke-linecap="round" stroke-width="6" />
+                <line x2="104.472" transform="translate(524.079 937.475)" fill="none" stroke="#c8c9d0"
+                  stroke-linecap="round" stroke-width="6" />
+                <line x2="104.472" transform="translate(524.079 962.126)" fill="none" stroke="#c8c9d0"
+                  stroke-linecap="round" stroke-width="6" />
+                <line x2="104.472" transform="translate(524.079 986.777)" fill="none" stroke="#c8c9d0"
+                  stroke-linecap="round" stroke-width="6" />
+              </g>
+            </svg>
+          </div>
+        </div>
+      </section>
+      <section class="features main__features">
+        <div class="container features__container">
+          <div>
+            <h2 class="features__title | fs-p-600 fw-p-bold text-n-200-db">Features</h2>
+            <p class="features__body | fs-p-400 text-n-700-gb">
+              Our aim is to make it quick and easy for you to access your favourite websites.
+              Your bookmarks sync between your devices so you can access them on the go.
+            </p>
+          </div>
+        </div>
 
-    A Simple Bookmark Manager
-    A clean and simple interface to organize your favourite websites. Open a new
-    browser tab and see your sites load instantly. Try it for free.
-    Get it on Chrome
-    Get it on Firefox
+      </section>
+    </main>
     <p style="display: none;">
-      Features
-      Our aim is to make it quick and easy for you to access your favourite websites.
-      Your bookmarks sync between your devices so you can access them on the go.
       Simple Bookmarking
       Speedy Searching
       Easy Sharing
@@ -157,6 +251,7 @@
       Pricing
       Cont
     </p>
+
   </body>
 
 </html>

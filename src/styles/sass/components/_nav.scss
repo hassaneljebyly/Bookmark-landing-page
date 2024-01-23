@@ -78,8 +78,6 @@
   }
 
   &__list-item {
-
-
     margin-right: 3em;
 
     @include respond-to('medium') {
@@ -97,16 +95,18 @@
     border-bottom: 0px;
   }
 
-  &__list-item--btn {
+
+  &__link--btn {
+    display: inline-block;
+    line-height: 1;
     border: 2px solid;
     border-radius: 5px;
     width: 100%;
-    padding-block: .25em;
+    padding-block: .7em;
     font-weight: var(--fw-p-bold);
 
     &:hover {
       @include respond-to('medium') {
-
         color: initial;
         background-color: initial;
         box-shadow: none;
@@ -190,8 +190,4 @@
     left: 0;
     width: 100%;
   }
-}
-
-.hello {
-  color: aliceblue;
 }

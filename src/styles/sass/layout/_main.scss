@@ -1,0 +1,132 @@
+@use "../abstract/mixins" as *;
+
+.main {
+  --_flex-direction: row;
+  --_content-order: 1;
+  --_illustration-order: 2;
+  overflow-x: hidden;
+
+  @include respond-to('medium-plus') {
+    --_flex-direction: column;
+    --_content-order: 2;
+    --_illustration-order: 1;
+    text-align: center;
+  }
+
+  &__hero {
+    height: calc(100dvh - 90px);
+  }
+
+
+  &__hero-container {
+    --max-width: 1500px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: var(--_flex-direction);
+  }
+}
+
+.hero {
+  &__content {
+    order: var(--_content-order);
+    width: 50%;
+
+    @include respond-to('medium-plus') {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    line-height: 1.33;
+
+    @include respond-to('medium-plus') {
+      margin-top: 1.5em;
+      font-size: var(--fs-p-600);
+    }
+  }
+
+  &__body {
+    line-height: 1.33;
+    max-width: 600px;
+
+    @include respond-to('medium') {
+      margin-top: .75em;
+    }
+
+    @include respond-to('medium-plus') {
+      margin-inline: auto;
+      font-size: var(--fs-p-400);
+    }
+
+  }
+
+  &__cta-group {
+    display: flex;
+    gap: .9em;
+
+    margin-top: 1.5em;
+
+    @include respond-to('medium-plus') {
+      justify-content: center;
+    }
+  }
+
+  &__cta {
+    padding: 0.75em 1em;
+    display: inline-block;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    transition: color, background 250ms ease;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    cursor: pointer;
+
+    @include respond-to('medium-plus') {
+      font-size: var(--fs-p-300);
+    }
+  }
+
+  &__cta--chrome:hover {
+    background-color: white;
+    color: var(--clr-p-600-sb);
+    border-color: var(--clr-p-600-sb);
+  }
+
+  &__cta--firefox:hover {
+    background-color: white;
+    color: var(--clr-n-400-gb);
+    border-color: var(--clr-n-400-gb);
+  }
+
+  &__illustration {
+    order: var(--_illustration-order);
+    width: max-content;
+
+    @include respond-to('medium-plus') {
+      display: grid;
+      place-items: center;
+      width: 100%;
+    }
+
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -20%;
+      left: 15%;
+
+      @include respond-to('medium-plus') {
+        left: 25%;
+      }
+
+      width: 150%;
+      height: 80%;
+      border-bottom-left-radius: 100vh;
+      border-top-left-radius: 100vh;
+      z-index: -1;
+      background-color: var(--clr-p-600-sb);
+    }
+  }
+}
