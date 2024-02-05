@@ -1,0 +1,40 @@
+@use "../abstract/mixins" as*;
+
+.cta-button {
+  padding: 0.75em 1em;
+  display: inline-block;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  transition: color, background 250ms ease;
+  font-size: var(--fs-p-400);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  cursor: pointer;
+
+
+  @include respond-to('medium-plus') {
+    font-size: var(--fs-p-300);
+  }
+
+  &--primary {
+    background-color: var(--clr-p-600-sb);
+    color: var(--clr-n-990-gb);
+
+    &:hover {
+      background-color: white;
+      color: var(--clr-p-600-sb);
+      border-color: var(--clr-p-600-sb);
+    }
+  }
+
+  &--secondary {
+    background-color: var(--clr-n-900-gb);
+    color: var(--clr-n-300-gb);
+
+    &:hover {
+      background-color: white;
+      color: var(--clr-n-400-gb);
+      border-color: var(--clr-n-400-gb);
+    }
+
+  }
+}

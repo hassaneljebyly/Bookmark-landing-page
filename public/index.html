@@ -18,6 +18,7 @@
   <!-- 
     TODO: skip home link
     TODO: focus style for accessibility 
+    TODO: head meta tags
    -->
 
   <body class="ff-p bg-n-990-gb">
@@ -96,8 +97,10 @@
               browser tab and see your sites load instantly. Try it for free.
             </p>
             <div class="hero__cta-group">
-              <a href="#" class="hero__cta hero__cta--chrome | fs-p-400 text-n-990-gb bg-p-600-sb">Get it on Chrome</a>
-              <a href="#" class="hero__cta hero__cta--firefox | fs-p-400 text-n-400-gb bg-n-900-gb">Get it on
+              <a href="#" class="hero__cta cta-button cta-button--primary">Get it
+                on Chrome</a>
+              <a href="#" class="hero__cta cta-button cta-button--secondary">Get it
+                on
                 Firefox</a>
             </div>
           </div>
@@ -178,33 +181,69 @@
       </section>
       <section class="features main__features">
         <div class="container features__container">
-          <div>
-            <h2 class="features__title | fs-p-600 fw-p-bold text-n-200-db">Features</h2>
-            <p class="features__body | fs-p-400 text-n-700-gb">
-              Our aim is to make it quick and easy for you to access your favourite websites.
-              Your bookmarks sync between your devices so you can access them on the go.
-            </p>
+          <h2 class="features__title | fs-p-600 fw-p-bold text-n-200-db" id="features-title">Features</h2>
+          <p class="features__body | fs-p-400 text-n-700-gb">
+            Our aim is to make it quick and easy for you to access your favourite websites.
+            Your bookmarks sync between your devices so you can access them on the go.
+          </p>
+          <ul class="features__tablist tablist" aria-labelledby="features-title">
+            <li class="features__tablist-item">
+              <a class="features__tab tab" id="tab-1" href="#simple_bookmarking">Simple Bookmarking</a>
+            </li>
+            <li class="features__tablist-item">
+              <a class="features__tab tab" id="tab-2" href="#speedy_searching">Speedy Searching</a>
+            </li>
+            <li class="features__tablist-item">
+              <a class="features__tab tab" id="tab-3" href="#easy_sharing">Easy Sharing</a>
+            </li>
+          </ul>
+
+
+          <div class="tabpanel" id="simple_bookmarking" aria-labelledby="tab-1">
+            <div>
+              <img src="./assets/illustration-features-tab-1.svg" alt="">
+            </div>
+            <div>
+              <h3>Bookmark in one click</h3>
+              <p>
+                Organize your bookmarks however you like. Our simple drag-and-drop interface
+                gives you complete control over how you manage your favourite sites.
+              </p>
+              <a href="#" class="cta-button cta-button--primary">More Info</a>
+            </div>
+          </div>
+          <div class="tabpanel" id="speedy_searching" aria-labelledby="tab-2">
+            <div>
+              <img src="./assets/illustration-features-tab-2.svg" alt="">
+            </div>
+            <div>
+              <h3>Intelligent search</h3>
+              <p>
+                Our powerful search feature will help you find saved sites in no time at all.
+                No need to trawl through all of your bookmarks.
+              </p>
+              <a href="#" class="cta-button cta-button--primary">More Info</a>
+            </div>
+          </div>
+          <div class="tabpanel" id="easy_sharing" aria-labelledby="tab-3">
+            <div>
+              <img src="./assets/illustration-features-tab-3.svg" alt="">
+            </div>
+            <div>
+              <h3>Share your bookmarks</h3>
+              <p>
+                Easily share your bookmarks and collections with others. Create a shareable
+                link that you can send at the click of a button.
+              </p>
+              <a href="#" class="cta-button cta-button--primary">More Info</a>
+            </div>
           </div>
         </div>
 
       </section>
     </main>
     <p style="display: none;">
-      Simple Bookmarking
-      Speedy Searching
-      Easy Sharing
-      Bookmark in one click
-      Organize your bookmarks however you like. Our simple drag-and-drop interface
-      gives you complete control over how you manage your favourite sites.
-      More Info
-      Intelligent search
-      Our powerful search feature will help you find saved sites in no time at all.
-      No need to trawl through all of your bookmarks.
-      More Info
-      Share your bookmarks
-      Easily share your bookmarks and collections with others. Create a shareable
-      link that you can send at the click of a button.
-      More Info
+
       Download the extension
       We’ve got more browsers in the pipeline. Please do let us know if you’ve
       got a favourite you’d like us to prioritize.

@@ -51,6 +51,28 @@
   --container-padding: 3.4em;
 }
 
+a:focus {
+  outline: none;
+  background: #ffdd00;
+  /* gold */
+}
+
+a:focus:not(:focus-visible) {
+  background: white;
+  /* undo gold */
+}
+
+.tabpanel:focus {
+  outline: none;
+  background: #ffdd00;
+  /* gold */
+}
+
+.tabpanel:focus:not(:focus-visible) {
+  background: white;
+  /* undo gold */
+}
+
 /*** The new CSS Reset - version 1.2.0 (last updated 23.7.2021) ***/
 /* Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property */
 *:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
@@ -91,14 +113,8 @@ html:focus-within {
   scroll-behavior: smooth;
 }
 
-html,
-body {
-  height: 100%;
-}
-
 /* Set core body defaults */
 body {
-  min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
 }
@@ -517,6 +533,8 @@ body.stop-transitions * {
 .header {
   position: sticky;
   top: 0;
+}
+.header--primary {
   z-index: 1000;
 }
 
@@ -593,30 +611,6 @@ body.stop-transitions * {
   .hero__cta-group {
     justify-content: center;
   }
-}
-.hero__cta {
-  padding: 0.75em 1em;
-  display: inline-block;
-  border-radius: 5px;
-  border: 1px solid transparent;
-  transition: color, background 250ms ease;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  cursor: pointer;
-}
-@media (max-width: 1420px) {
-  .hero__cta {
-    font-size: var(--fs-p-300);
-  }
-}
-.hero__cta--chrome:hover {
-  background-color: white;
-  color: var(--clr-p-600-sb);
-  border-color: var(--clr-p-600-sb);
-}
-.hero__cta--firefox:hover {
-  background-color: white;
-  color: var(--clr-n-400-gb);
-  border-color: var(--clr-n-400-gb);
 }
 .hero__illustration {
   order: var(--_illustration-order);
@@ -821,4 +815,38 @@ body.stop-transitions * {
   top: 89dvh;
   left: 0;
   width: 100%;
+}
+
+.cta-button {
+  padding: 0.75em 1em;
+  display: inline-block;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  transition: color, background 250ms ease;
+  font-size: var(--fs-p-400);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  cursor: pointer;
+}
+@media (max-width: 1420px) {
+  .cta-button {
+    font-size: var(--fs-p-300);
+  }
+}
+.cta-button--primary {
+  background-color: var(--clr-p-600-sb);
+  color: var(--clr-n-990-gb);
+}
+.cta-button--primary:hover {
+  background-color: white;
+  color: var(--clr-p-600-sb);
+  border-color: var(--clr-p-600-sb);
+}
+.cta-button--secondary {
+  background-color: var(--clr-n-900-gb);
+  color: var(--clr-n-300-gb);
+}
+.cta-button--secondary:hover {
+  background-color: white;
+  color: var(--clr-n-400-gb);
+  border-color: var(--clr-n-400-gb);
 }
