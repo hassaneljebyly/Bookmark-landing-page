@@ -4,13 +4,12 @@
   --_flex-direction: row;
   --_content-order: 1;
   --_illustration-order: 2;
-  overflow-x: hidden;
+  overflow: hidden;
 
   @include respond-to('medium-plus') {
     --_flex-direction: column;
     --_content-order: 2;
     --_illustration-order: 1;
-    text-align: center;
   }
 
   &__hero {
@@ -35,11 +34,13 @@
 
     @include respond-to('medium-plus') {
       width: 100%;
+      text-align: center;
     }
   }
 
   &__title {
     line-height: 1.33;
+    margin-bottom: .5em;
 
     @include respond-to('medium-plus') {
       margin-top: 1.5em;
@@ -65,8 +66,7 @@
   &__cta-group {
     display: flex;
     gap: .9em;
-
-    margin-top: 1.5em;
+    margin-top: 1.75em;
 
     @include respond-to('medium-plus') {
       justify-content: center;
@@ -85,23 +85,5 @@
     }
 
     position: relative;
-
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: -20%;
-      left: 15%;
-
-      @include respond-to('medium-plus') {
-        left: 25%;
-      }
-
-      width: 150%;
-      height: 80%;
-      border-bottom-left-radius: 100vh;
-      border-top-left-radius: 100vh;
-      z-index: -1;
-      background-color: var(--clr-p-600-sb);
-    }
   }
 }

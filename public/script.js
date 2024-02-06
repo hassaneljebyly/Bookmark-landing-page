@@ -25,28 +25,28 @@ const TABS = document.querySelectorAll('.tab');
 // set up tabs
 TABS.forEach((tab, index) => {
   let tabPanelID = tab.getAttribute('href').split('#')[1];
+  let tabPanel = document.getElementById(tabPanelID);
+  tabPanel.setAttribute('role', 'tabpanel');
   tab.setAttribute('aria-controls', tabPanelID);
   if (index === 0) {
     toggleTab(tab, true);
+    animateIndicator(tab);
   } else {
     toggleTab(tab, false);
   }
 });
+
 TAB_LIST.addEventListener('keydown', (e) => {
   const allowedKeys = ['ArrowRight', 'ArrowLeft', 'End', 'Home'];
-
   if (allowedKeys.includes(e.key)) {
     let currentActiveTab = e.target;
     let { nextTabName, outOfRangeValue } = getOptions(e);
     let nextTab = e.target.parentElement[nextTabName]?.firstElementChild;
     toggleTab(currentActiveTab, false);
-    if (nextTab) {
-      nextTab.focus();
-      toggleTab(nextTab, true);
-    } else {
-      TABS[outOfRangeValue].focus();
-      toggleTab(TABS[outOfRangeValue], true);
-    }
+    nextTab ? (currentActiveTab = nextTab) : (currentActiveTab = TABS[outOfRangeValue]);
+    currentActiveTab.focus();
+    toggleTab(currentActiveTab, true);
+    animateIndicator(currentActiveTab);
   }
 });
 
@@ -54,6 +54,7 @@ TAB_LIST.addEventListener('click', (e) => {
   let tabClicked = e.target;
   if (tabClicked.tagName != 'A') return;
   e.preventDefault();
+  animateIndicator(tabClicked);
   TAB_LIST.querySelectorAll('li > a').forEach((tab) => {
     if (tabClicked === tab) {
       toggleTab(tab, true);
@@ -62,6 +63,7 @@ TAB_LIST.addEventListener('click', (e) => {
     }
   });
 });
+
 /**
  * @param  {string} key key pressed
  */
@@ -95,10 +97,18 @@ function toggleTab(tab, toggle) {
   targetPanel.querySelector('a').setAttribute('tabindex', toggle ? 0 : -1);
 }
 
+function animateIndicator(targetedTab) {
+  let targetedTabWidth = getComputedStyle(targetedTab).width;
+  let targetedTabHeight = getComputedStyle(targetedTab).height;
+  let elementDistanceFromLeft = targetedTab.offsetLeft;
+  let elementDistanceFromTop = targetedTab.offsetTop;
+  console.log(elementDistanceFromTop + Number(targetedTabHeight.split('px')[0]));
+  TAB_LIST.style = `--_indicator-width: ${targetedTabWidth}; --_left-pos: ${elementDistanceFromLeft}px; --_top-pos: ${elementDistanceFromTop + Number(targetedTabHeight.split('px')[0])}px;`;
+}
+
 MENU_BTN.addEventListener('click', () => {
   PRIMARY_NAV.classList.toggle('nav--open');
   let open = !PRIMARY_NAV.classList.contains('nav--open');
-  console.log(open);
   NAV_LIST.setAttribute('aria-hidden', open);
   NAV_SOCIAL.setAttribute('aria-hidden', open);
 });

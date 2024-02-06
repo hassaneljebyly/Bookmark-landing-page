@@ -1,0 +1,31 @@
+@use "../abstract/mixins" as *;
+
+.svg-back-rect {
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -20%;
+    left: 15%;
+
+    @include respond-to('medium-plus') {
+      left: 25%;
+    }
+
+    background-color: var(--clr-p-600-sb);
+    border-bottom-left-radius: 100vh;
+    border-top-left-radius: 100vh;
+    bottom: -20%;
+    content: "";
+    height: 80%;
+    left: 15%;
+    position: absolute;
+    width: 150%;
+    z-index: -1;
+  }
+
+  &--reversed::after {
+    transform: scale(-1) translateX(60%);
+    width: 50vw;
+  }
+}

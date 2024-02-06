@@ -36,25 +36,3 @@
 
   --container-padding : 3.4em;
 }
-
-a:focus {
-  outline: none;
-  background: #ffdd00;
-  /* gold */
-}
-
-a:focus:not(:focus-visible) {
-  background: white;
-  /* undo gold */
-}
-
-.tabpanel:focus {
-  outline: none;
-  background: #ffdd00;
-  /* gold */
-}
-
-.tabpanel:focus:not(:focus-visible) {
-  background: white;
-  /* undo gold */
-}
