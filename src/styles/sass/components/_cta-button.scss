@@ -1,10 +1,10 @@
 @use "../abstract/mixins" as*;
 
 .cta-button {
-  padding: 0.75em 1em;
+  padding: 0.50em 1.5em;
   display: inline-block;
   border-radius: 5px;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
   transition: color, background 250ms ease;
   font-size: var(--fs-p-400);
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;

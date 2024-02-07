@@ -622,6 +622,14 @@ body.stop-transitions * {
   margin-block: 1em;
 }
 
+.download__title,
+.download__body {
+  text-align: center;
+  max-width: 45ch;
+  margin-inline: auto;
+  margin-block: 1em;
+}
+
 .nav {
   --_nav-block-padding: 2em;
   --_nav-list-transform: -150%;
@@ -824,10 +832,10 @@ body.stop-transitions * {
 }
 
 .cta-button {
-  padding: 0.75em 1em;
+  padding: 0.5em 1.5em;
   display: inline-block;
   border-radius: 5px;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
   transition: color, background 250ms ease;
   font-size: var(--fs-p-400);
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -972,4 +980,18 @@ body.stop-transitions * {
 .tabpanel:focus-visible {
   outline: 3px solid blue;
   outline-offset: 5px;
+}
+
+.card {
+  --_padding-block: 1.45em;
+  background-color: bisque;
+  border: 1px solid black;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: var(--_padding-block);
+}
+.card > * {
+  margin-bottom: var(--_padding-block);
 }

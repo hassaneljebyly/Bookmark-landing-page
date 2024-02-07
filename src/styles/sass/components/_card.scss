@@ -1,0 +1,14 @@
+.card {
+  --_padding-block: 1.45em;
+  background-color: bisque;
+  border: 1px solid black;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: var(--_padding-block);
+
+  &>* {
+    margin-bottom: var(--_padding-block);
+  }
+}
