@@ -1,7 +1,38 @@
-.download__title,
-.download__body {
-  text-align: center;
-  max-width: 45ch;
-  margin-inline: auto;
-  margin-block: 1em;
+@use "../abstract/mixins" as *;
+
+.download {
+  margin-block: 8em;
+
+  &__title,
+  &__body {
+    text-align: center;
+    max-width: 45ch;
+    margin-inline: auto;
+    margin-block: 1em;
+  }
+
+  &__cards-wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+  }
+
+  &__cards {
+    --_margin-top: 2em;
+
+    @include respond-to("medium") {
+      --_margin-top: 0;
+    }
+
+    &--firefox {
+      margin-top: calc(1 * var(--_margin-top));
+    }
+
+    &--opera {
+      margin-top: calc(2 * var(--_margin-top));
+    }
+  }
 }

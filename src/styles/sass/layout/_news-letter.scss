@@ -1,0 +1,29 @@
+@use "../abstract/mixins" as *;
+
+.news-letter {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3em;
+    padding-block: 5em;
+    text-align: center;
+  }
+
+  &__body {
+    order: 1;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+
+    @include respond-to("medium") {
+      font-size: var(--fs-p-300);
+    }
+  }
+
+  &__title {
+    order: 2;
+  }
+
+  &__form {
+    order: 3;
+  }
+}

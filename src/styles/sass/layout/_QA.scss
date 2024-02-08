@@ -1,0 +1,17 @@
+.QA {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title,
+  &__body {
+    margin-top: 1em;
+    text-align: center;
+    max-width: 45ch;
+    margin-inline: auto;
+  }
+
+  &__wrapper {
+    margin-block: 4em;
+  }
+}

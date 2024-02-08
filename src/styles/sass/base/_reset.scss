@@ -73,6 +73,11 @@ button:focus-visible {
   outline-offset: 5px;
 }
 
+[tabindex="0"]:focus-visible {
+  outline: 3px solid blue;
+  outline-offset: 5px;
+}
+
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {

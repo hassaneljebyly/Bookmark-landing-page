@@ -19,6 +19,7 @@
     TODO: skip home link
     TODO: head meta tags
     TODO: add animation
+    TODO: add alt
    -->
 
   <body class="ff-p bg-n-990-gb">
@@ -254,79 +255,112 @@
             got a favourite you’d like us to prioritize.
           </p>
           <div class="download__cards-wrapper">
-            <div class="download__cards card card--chrome">
-              <img src="./assets/logo-chrome.svg" alt="">
-              <h3 class="card__title | fs-p-500 fw-p-bold text-n-200-db">Add to Chrome</h3>
+            <div class="download__cards download__cards--chrome card card--chrome">
+              <img class="card__logo" src="./assets/logo-chrome.svg" alt="">
+              <h3 class="card__title | fs-p-400 fw-p-bold text-n-200-db">Add to Chrome</h3>
               <p class="card__body | fs-p-300 text-n-700-gb">Minimum version 62</p>
-              <img src="./assets/bg-dots.svg" alt="">
+              <img class="card__bg-dots" src="./assets/bg-dots.svg" alt="">
               <a class="card__cta cta-button cta-button--primary" href="#">Add & Install Extension</a>
             </div>
-            <div class="download__cards card card--firefox">
-              <img src="./assets/logo-firefox.svg" alt="">
-              <h3 class="card__title | fs-p-500 fw-p-bold text-n-200-db">Add to Firefox</h3>
+            <div class="download__cards download__cards--firefox card card--firefox">
+              <img class="card__logo" src="./assets/logo-firefox.svg" alt="">
+              <h3 class="card__title | fs-p-400 fw-p-bold text-n-200-db">Add to Firefox</h3>
               <p class="card__body | fs-p-300 text-n-700-gb">Minimum version 55</p>
-              <img src="./assets/bg-dots.svg" alt="">
+              <img class="card__bg-dots" src="./assets/bg-dots.svg" alt="">
               <a class="card__cta cta-button cta-button--primary" href="#">Add & Install Extension</a>
             </div>
-            <div class="download__cards card card--opera">
-              <img src="./assets/logo-opera.svg" alt="">
-              <h3 class="card__title | fs-p-500 fw-p-bold text-n-200-db">Add to Opera</h3>
+            <div class="download__cards download__cards--opera card card--opera">
+              <img class="card__logo" src="./assets/logo-opera.svg" alt="">
+              <h3 class="card__title | fs-p-400 fw-p-bold text-n-200-db">Add to Opera</h3>
               <p class="card__body | fs-p-300 text-n-700-gb">Minimum version 46</p>
-              <img src="./assets/bg-dots.svg" alt="">
+              <img class="card__bg-dots" src="./assets/bg-dots.svg" alt="">
               <a class="card__cta cta-button cta-button--primary" href="#">Add & Install Extension</a>
             </div>
           </div>
         </div>
       </section>
+      <section class="QA main__QA">
+        <div class="container QA__container">
+          <h2 class="QA__title | fs-p-600 fw-p-bold text-n-200-db" id="QA-title">Frequently Asked Questions
+          </h2>
+          <p class="QA__body | fs-p-400 text-n-700-gb">Here are some of our FAQs. If you have any other questions
+            you’d like answered please feel free to email us.</p>
+          <div class="QA__wrapper">
+            <!-- link to accordion component: https://github.com/hassaneljebyly/ui-components/tree/master/Accordion -->
+            <div class="accordion">
+              <div class="accordion__panel default-open" id="accordion__panel-1">
+                <div class="accordion__heading accordion-btn" role="button" tabindex="0"
+                  aria-controls="accordion__panel-1">
+                  <h3 class="accordion__title" id="accordion__title-1">What is Bookmark?</h3>
+                  <span class="accordion__icon"></span>
+                </div>
+                <div class="accordion__content" aria-labelledby="accordion__title-1">
+                  <p class="accordion__p">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt
+                    justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.
+                  </p>
+                </div>
+              </div>
+              <div class="accordion__panel default-open" id="accordion__panel-2">
+                <div class="accordion__heading accordion-btn" role="button" tabindex="0"
+                  aria-controls="accordion__panel-2">
+                  <h3 class="accordion__title" id="accordion__title-2">How can I request a new browser?</h3>
+                  <span class="accordion__icon"></span>
+                </div>
+                <div class="accordion__content" aria-labelledby="accordion__title-2">
+                  <p class="accordion__p">
+                    Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula.
+                    Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa,
+                    ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies.
+                    Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
+                  </p>
+                </div>
+              </div>
+              <div class="accordion__panel default-open" id="accordion__panel-3">
+                <div class="accordion__heading accordion-btn" role="button" tabindex="0"
+                  aria-controls="accordion__panel-3">
+                  <h3 class="accordion__title" id="accordion__title-3">Is there a mobile app?</h3>
+                  <span class="accordion__icon"></span>
+                </div>
+                <div class="accordion__content" aria-labelledby="accordion__title-3">
+                  <p class="accordion__p">
+                    Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum
+                    urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed
+                    sollicitudin ex et ultricies bibendum.
+                  </p>
+                </div>
+              </div>
+              <div class="accordion__panel default-open" id="accordion__panel-4">
+                <div class="accordion__heading accordion-btn" role="button" tabindex="0"
+                  aria-controls="accordion__panel-4">
+                  <h3 class="accordion__title" id="accordion__title-4">What about other Chromium browsers?</h3>
+                  <span class="accordion__icon"></span>
+                </div>
+                <div class="accordion__content" aria-labelledby="accordion__title-4">
+                  <p class="accordion__p">
+                    Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam
+                    vitae neque eget nisl gravida pellentesque non ut velit.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="QA__cta cta-button cta-button--primary" href="#">More Info</a>
+      </section>
+      <section class="news-letter main__news-letter bg-p-600-sb">
+        <div class="container news-letter__container">
+          <h2 class="news-letter__title | fs-p-500 text-n-990-gb">Stay up-to-date with what we’re doing</h2>
+          <p class="news-letter__body | fs-p-400 text-n-990-gb">35,000+ already joined</p>
+          <form class="news-letter__form">
+            <label class="news-letter__form-label" for="news-letter-email-input"></label>
+            <input class="news-letter__form-input" placeholder="Enter your email address" type="email" name="email"
+              id="news-letter-email-input">
+            <button class="news-letter__form-cta" type="submit">Contact Us</button>
+          </form>
+        </div>
+      </section>
     </main>
-
-
-
-
-
-
-
-
-
-
-
-
-    <p style="display: none;">
-      Frequently Asked Questions
-      Here are some of our FAQs. If you have any other questions you’d like
-      answered please feel free to email us.
-      <!-- Question 1 -->
-      What is Bookmark?
-      <!-- Answer 1 -->
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt
-      justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.
-      <!-- Question 2 -->
-      How can I request a new browser?
-      <!-- Answer 2 -->
-      Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula.
-      Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa,
-      ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies.
-      Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
-      <!-- Question 3 -->
-      Is there a mobile app?
-      <!-- Answer 3 -->
-      Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum
-      urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed
-      sollicitudin ex et ultricies bibendum.
-      <!-- Question 4 -->
-      What about other Chromium browsers?
-      <!-- Answer 4 -->
-      Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam
-      vitae neque eget nisl gravida pellentesque non ut velit.
-      More Info
-      35,000+ already joined
-      Stay up-to-date with what we’re doing
-      Contact Us
-      Features
-      Pricing
-      Cont
-    </p>
-
   </body>
 
 </html>

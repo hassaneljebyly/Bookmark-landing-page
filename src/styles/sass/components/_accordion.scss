@@ -1,0 +1,88 @@
+@use "../abstract/mixins" as *;
+
+.accordion {
+  --acc-padding: .8em;
+  --icon-rotate: 90deg;
+  --gtr-content: 0fr;
+  --_scale-icon: 1;
+  --_filter-to-red: none;
+  background-color: transparent;
+  max-width: 550px;
+  margin-inline: auto;
+  border-radius: 5px;
+  font-size: var(--fs-p-400);
+
+  @include respond-to("medium") {
+    font-size: var(--fs-p-300);
+  }
+
+
+  &__panel {
+    position: relative;
+    display: grid;
+    grid-template-rows: auto var(--gtr-content);
+    border: solid var(--clr-n-800-gb);
+    border-width: 1px 0px;
+    transition: grid-template-rows 150ms ease-in-out;
+  }
+
+  &__panel:not(:first-child) {
+    border-top-width: 0px;
+  }
+
+  &__panel.open,
+  &__panel.default-open {
+    --gtr-content: 1fr;
+    --icon-rotate: 0deg;
+    --underline-width: 100%;
+    --_scale-icon: -1;
+    --_filter-to-red: invert(46%) sepia(65%) saturate(563%) hue-rotate(308deg) brightness(89%) contrast(88%);
+  }
+
+  &__heading {
+    padding: var(--acc-padding);
+    position: relative;
+    /* on chrome the heading stretches on open, max-content fixes it */
+    height: max-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    color: var(--clr-p-100-sb);
+  }
+
+  &__title:hover {
+    color: var(--clr-p-600-sr);
+    transition: color 150ms ease;
+  }
+
+  &__icon {
+    display: block;
+    position: relative;
+    width: 30px;
+    aspect-ratio: 1;
+    filter: var(--_filter-to-red);
+  }
+
+  &__icon::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: resolve("icon-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    scale: var(--_scale-icon);
+    transform-origin: center center;
+    margin: auto;
+    transition: scale 150ms ease-in-out;
+  }
+
+  &__p {
+    padding: var(--acc-padding);
+    color: var(--clr-n-400-gb);
+  }
+
+  &__content {
+    overflow: hidden;
+  }
+}

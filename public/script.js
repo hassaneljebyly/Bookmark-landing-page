@@ -22,6 +22,34 @@ const TABS = document.querySelectorAll('.tab');
     }, 100);
   });
 })();
+
+const ACCORDION_BTN = document.querySelectorAll('.accordion-btn');
+const ACCORDION_PANEL = document.querySelectorAll('.accordion__panel');
+ACCORDION_PANEL.forEach((panel) => {
+  panel.classList.remove('default-open');
+});
+ACCORDION_BTN.forEach((accButton) => {
+  accButton.addEventListener('click', () => {
+    togglePanel(accButton, false);
+  });
+  accButton.addEventListener('keyup', ({ key }) => {
+    key === 'Enter' || key === ' ' ? togglePanel(accButton, false) : '';
+  });
+});
+
+function togglePanel(accButton, closeCurrentOpen) {
+  let currentOpenPanel = document.getElementsByClassName('open')[0];
+  const targetPanelId = accButton.getAttribute('aria-controls');
+  const targetPanel = document.getElementById(targetPanelId);
+  const isOpen = targetPanel.classList.contains('open');
+  const panelContent = targetPanel.children[1];
+  // if true close last opened panel if one is open
+  currentOpenPanel && closeCurrentOpen ? currentOpenPanel.classList.remove('open') : '';
+  targetPanel.classList.toggle('open');
+  accButton.setAttribute('aria-expanded', !isOpen);
+  panelContent.setAttribute('aria-hidden', isOpen);
+}
+
 // set up tabs
 TABS.forEach((tab, index) => {
   let tabPanelID = tab.getAttribute('href').split('#')[1];
