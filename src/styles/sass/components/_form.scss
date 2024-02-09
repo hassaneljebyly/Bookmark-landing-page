@@ -1,0 +1,80 @@
+@use "../abstract/mixins" as *;
+
+.form {
+  --_input-border-radius: 5px;
+  --_border-bottom: var(--_input-border-radius);
+  --_outline-error-color: transparent;
+  --_display-error-hint: none;
+  --_display-error-icon: none;
+  margin-inline: auto;
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  gap: 2em;
+
+  @include respond-to("medium") {
+    flex-direction: column;
+  }
+
+  &--error {
+    --_border-bottom: 0;
+    --_outline-error-color: var(--clr-p-600-sr);
+    --_display-error-hint: block;
+    --_display-error-icon: inline;
+  }
+
+  &__input-container {
+    width: 100%;
+    display: flex;
+    position: relative;
+  }
+
+  &__input {
+    width: 100%;
+    text-align: left;
+    padding: .75em 1.5em;
+    border-radius: var(--_input-border-radius);
+    border-bottom-left-radius: var(--_border-bottom);
+    border-bottom-right-radius: var(--_border-bottom);
+    background-color: var(--clr-n-990-gb);
+    font-size: var(--fs-p-300);
+    border: 2px solid var(--_outline-error-color);
+
+    &::placeholder {
+      color: var(--clr-n-700-gb);
+    }
+  }
+
+  &__hint {
+    font-size: var(--fs-p-300);
+    font-style: italic;
+    color: var(--clr-n-990-gb);
+    background-color: var(--clr-p-600-sr);
+    display: var(--_display-error-hint);
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    transform: translateY(100%);
+    text-align: left;
+    text-indent: 1.5em;
+    border-radius: 0 0 var(--_input-border-radius) var(--_input-border-radius);
+  }
+
+  &__error-icon {
+    display: var(--_display-error-icon);
+    position: absolute;
+    height: 60%;
+    aspect-ratio: 1;
+    top: 50%;
+    right: .5em;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background-image: resolve("icon-error.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__cta {
+    flex-shrink: 0;
+  }
+}

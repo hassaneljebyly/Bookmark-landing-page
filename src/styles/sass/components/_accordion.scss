@@ -49,12 +49,13 @@
     align-items: center;
     cursor: pointer;
     color: var(--clr-p-100-sb);
+
+    &:hover {
+      color: var(--clr-p-600-sr);
+      transition: color 150ms ease;
+    }
   }
 
-  &__title:hover {
-    color: var(--clr-p-600-sr);
-    transition: color 150ms ease;
-  }
 
   &__icon {
     display: block;

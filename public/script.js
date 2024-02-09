@@ -5,6 +5,10 @@ const NAV_LIST = document.getElementById('nav_list');
 const NAV_SOCIAL = document.getElementById('nav_social');
 const TAB_LIST = document.querySelector('.tablist');
 const TABS = document.querySelectorAll('.tab');
+const ACCORDION_BTN = document.querySelectorAll('.accordion-btn');
+const ACCORDION_PANEL = document.querySelectorAll('.accordion__panel');
+const NEWS_LETTER_EMAIL_INPUT = document.getElementById('news-letter-email-input');
+const NEWS_LETTER_FORM = document.querySelector('.news-letter__form');
 
 // stop annoying animation during resize
 (function () {
@@ -23,8 +27,16 @@ const TABS = document.querySelectorAll('.tab');
   });
 })();
 
-const ACCORDION_BTN = document.querySelectorAll('.accordion-btn');
-const ACCORDION_PANEL = document.querySelectorAll('.accordion__panel');
+// email validation
+NEWS_LETTER_EMAIL_INPUT.addEventListener('invalid', (e) => {
+  // smh this removes default validation styles
+  e.preventDefault();
+  NEWS_LETTER_FORM.classList.add('form--error');
+});
+NEWS_LETTER_EMAIL_INPUT.addEventListener('keydown', () => {
+  NEWS_LETTER_EMAIL_INPUT.value === '' ? NEWS_LETTER_FORM.classList.remove('form--error') : '';
+});
+// accordion
 ACCORDION_PANEL.forEach((panel) => {
   panel.classList.remove('default-open');
 });
@@ -130,7 +142,6 @@ function animateIndicator(targetedTab) {
   let targetedTabHeight = getComputedStyle(targetedTab).height;
   let elementDistanceFromLeft = targetedTab.offsetLeft;
   let elementDistanceFromTop = targetedTab.offsetTop;
-  console.log(elementDistanceFromTop + Number(targetedTabHeight.split('px')[0]));
   TAB_LIST.style = `--_indicator-width: ${targetedTabWidth}; --_left-pos: ${elementDistanceFromLeft}px; --_top-pos: ${elementDistanceFromTop + Number(targetedTabHeight.split('px')[0])}px;`;
 }
 

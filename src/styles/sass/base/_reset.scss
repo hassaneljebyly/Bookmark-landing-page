@@ -64,17 +64,17 @@ svg {
 }
 
 a:focus-visible {
-  outline: 3px solid blue;
+  outline: 3px solid var(--_focus-color, blue);
   outline-offset: 5px;
 }
 
 button:focus-visible {
-  outline: 3px solid blue;
+  outline: 3px solid var(--_focus-color, blue);
   outline-offset: 5px;
 }
 
 [tabindex="0"]:focus-visible {
-  outline: 3px solid blue;
+  outline: 3px solid var(--_focus-color, blue);
   outline-offset: 5px;
 }
 

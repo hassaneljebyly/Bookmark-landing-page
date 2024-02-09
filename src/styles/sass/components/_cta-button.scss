@@ -37,4 +37,16 @@
     }
 
   }
+
+  &--red {
+    background-color: var(--clr-p-600-sr);
+    color: var(--clr-n-990-gb);
+
+    &:hover {
+      background-color: white;
+      color: var(--clr-p-600-sr);
+      border-color: var(--clr-p-600-sr);
+    }
+
+  }
 }

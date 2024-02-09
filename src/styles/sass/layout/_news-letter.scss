@@ -1,10 +1,12 @@
 @use "../abstract/mixins" as *;
 
 .news-letter {
+  --_focus-color: rgb(255, 196, 0);
+
   &__container {
     display: flex;
     flex-direction: column;
-    margin-top: 3em;
+    margin-top: 5.5em;
     padding-block: 5em;
     text-align: center;
   }
@@ -13,14 +15,18 @@
     order: 1;
     text-transform: uppercase;
     letter-spacing: .2rem;
-
-    @include respond-to("medium") {
-      font-size: var(--fs-p-300);
-    }
   }
 
   &__title {
     order: 2;
+    margin-block: .75em;
+    line-height: calc(1.6 * var(--fs-p-500));
+    max-width: 20ch;
+    margin-inline: auto;
+
+    @include respond-to("medium") {
+      font-size: var(--fs-p-500);
+    }
   }
 
   &__form {
