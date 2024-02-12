@@ -9,6 +9,7 @@ const ACCORDION_BTN = document.querySelectorAll('.accordion-btn');
 const ACCORDION_PANEL = document.querySelectorAll('.accordion__panel');
 const NEWS_LETTER_EMAIL_INPUT = document.getElementById('news-letter-email-input');
 const NEWS_LETTER_FORM = document.querySelector('.news-letter__form');
+const CARDS = document.querySelectorAll('.card');
 
 // stop annoying animation during resize
 (function () {

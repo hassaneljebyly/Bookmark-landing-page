@@ -28,7 +28,13 @@
 }
 
 .hero {
+  --_easing: cubic-bezier(0.5, 1.8, 0.3, 0.8);
+  --_duration: 900ms;
+  --_animation-direction: -1;
+
   &__content {
+    animation: slide-in var(--_duration) 250ms forwards var(--_easing);
+    opacity: 0;
     order: var(--_content-order);
     width: 50%;
 
@@ -85,5 +91,23 @@
     }
 
     position: relative;
+  }
+
+  &__illustration-svg {
+    --_animation-direction: 1;
+    animation: slide-in var(--_duration) 250ms forwards var(--_easing);
+    opacity: 0;
+  }
+}
+
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(calc(var(--_animation-direction, 1) * 200%));
+  }
+
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
   }
 }

@@ -1,14 +1,23 @@
 @use "../abstract/mixins" as *;
 
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
 .card {
   --_padding-block: 1.25em;
-  border-radius: 5px;
+  --_card-border-radius: 5px;
+  border-radius: var(--_card-border-radius, 5px);
   max-width: 250px;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-block: var(--_padding-block);
+  background-color: var(--clr-n-990-gb);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  position: relative;
 
   &__logo {
     margin-block: 1.5em;

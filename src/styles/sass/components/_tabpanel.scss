@@ -9,6 +9,8 @@
 }
 
 .tabpanel[role="tabpanel"] {
+  --_easing: cubic-bezier(0.5, 1.8, 0.3, 0.8);
+  --_duration: 500ms;
   grid-row-start: 1;
   grid-column-start: 1;
 
@@ -59,4 +61,33 @@
 .tabpanel:focus-visible {
   outline: 3px solid blue;
   outline-offset: 5px;
+}
+
+
+.tabpanel[tabindex="-1"] {
+  &>.tabpanel__columns>img {
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform var(--_duration) var(--_easing), opacity var(--_duration) var(--_easing);
+  }
+
+  &>.tabpanel__columns>*:not(img) {
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform var(--_duration) var(--_easing), opacity var(--_duration) var(--_easing);
+  }
+}
+
+.tabpanel[tabindex="0"] {
+  &>.tabpanel__columns>img {
+    transform: translateX(0%);
+    opacity: 1;
+    transition: transform var(--_duration) var(--_easing), opacity var(--_duration) var(--_easing);
+  }
+
+  &>.tabpanel__columns>*:not(img) {
+    transform: translateX(0%);
+    opacity: 1;
+    transition: transform var(--_duration) var(--_easing), opacity var(--_duration) var(--_easing);
+  }
 }

@@ -5,6 +5,8 @@
   &::after {
     content: "";
     position: absolute;
+
+    height: 80%;
     bottom: -20%;
     left: 15%;
 
@@ -15,11 +17,6 @@
     background-color: var(--clr-p-600-sb);
     border-bottom-left-radius: 100vh;
     border-top-left-radius: 100vh;
-    bottom: -20%;
-    content: "";
-    height: 80%;
-    left: 15%;
-    position: absolute;
     width: 150%;
     z-index: -1;
   }

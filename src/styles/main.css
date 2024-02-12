@@ -580,7 +580,14 @@ body.stop-transitions * {
   flex-direction: var(--_flex-direction);
 }
 
+.hero {
+  --_easing: cubic-bezier(0.5, 1.8, 0.3, 0.8);
+  --_duration: 900ms;
+  --_animation-direction: -1;
+}
 .hero__content {
+  animation: slide-in var(--_duration) 250ms forwards var(--_easing);
+  opacity: 0;
   order: var(--_content-order);
   width: 50%;
 }
@@ -637,7 +644,21 @@ body.stop-transitions * {
     width: 100%;
   }
 }
+.hero__illustration-svg {
+  --_animation-direction: 1;
+  animation: slide-in var(--_duration) 250ms forwards var(--_easing);
+  opacity: 0;
+}
 
+@keyframes slide-in {
+  0% {
+    transform: translateX(calc(var(--_animation-direction, 1) * 200%));
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
 .features__title,
 .features__body {
   text-align: center;
@@ -960,16 +981,12 @@ body.stop-transitions * {
 .svg-back-rect::after {
   content: "";
   position: absolute;
+  height: 80%;
   bottom: -20%;
   left: 15%;
   background-color: var(--clr-p-600-sb);
   border-bottom-left-radius: 100vh;
   border-top-left-radius: 100vh;
-  bottom: -20%;
-  content: "";
-  height: 80%;
-  left: 15%;
-  position: absolute;
   width: 150%;
   z-index: -1;
 }
@@ -1095,6 +1112,8 @@ body.stop-transitions * {
 }
 
 .tabpanel[role=tabpanel] {
+  --_easing: cubic-bezier(0.5, 1.8, 0.3, 0.8);
+  --_duration: 500ms;
   grid-row-start: 1;
   grid-column-start: 1;
   display: flex;
@@ -1143,15 +1162,45 @@ body.stop-transitions * {
   outline-offset: 5px;
 }
 
+.tabpanel[tabindex="-1"] > .tabpanel__columns > img {
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: transform var(--_duration) var(--_easing), opacity var(--_duration) var(--_easing);
+}
+.tabpanel[tabindex="-1"] > .tabpanel__columns > *:not(img) {
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform var(--_duration) var(--_easing), opacity var(--_duration) var(--_easing);
+}
+
+.tabpanel[tabindex="0"] > .tabpanel__columns > img {
+  transform: translateX(0%);
+  opacity: 1;
+  transition: transform var(--_duration) var(--_easing), opacity var(--_duration) var(--_easing);
+}
+.tabpanel[tabindex="0"] > .tabpanel__columns > *:not(img) {
+  transform: translateX(0%);
+  opacity: 1;
+  transition: transform var(--_duration) var(--_easing), opacity var(--_duration) var(--_easing);
+}
+
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
 .card {
   --_padding-block: 1.25em;
-  border-radius: 5px;
+  --_card-border-radius: 5px;
+  border-radius: var(--_card-border-radius, 5px);
   max-width: 250px;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-block: var(--_padding-block);
+  background-color: var(--clr-n-990-gb);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  position: relative;
 }
 .card__logo {
   margin-block: 1.5em;
