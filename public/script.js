@@ -88,22 +88,31 @@ TAB_LIST.addEventListener('keydown', (e) => {
     currentActiveTab.focus();
     toggleTab(currentActiveTab, true);
     animateIndicator(currentActiveTab);
+    setUpURL(currentActiveTab);
   }
 });
 
 TAB_LIST.addEventListener('click', (e) => {
   let tabClicked = e.target;
   if (tabClicked.tagName != 'A') return;
-  e.preventDefault();
+  e.preventDefault(); // this also prevents url fragment update, fixed with the setUpURL function
   animateIndicator(tabClicked);
   TAB_LIST.querySelectorAll('li > a').forEach((tab) => {
     if (tabClicked === tab) {
       toggleTab(tab, true);
+      setUpURL(tab);
     } else {
       toggleTab(tab, false);
     }
   });
 });
+
+function setUpURL(tab) {
+  const tabID = tab.getAttribute('href');
+  const { origin, pathname } = window.location;
+  const newURL = origin + pathname + tabID;
+  window.history.replaceState(null, '', newURL);
+}
 
 /**
  * @param  {string} key key pressed
