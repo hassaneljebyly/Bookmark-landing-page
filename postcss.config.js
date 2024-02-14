@@ -7,5 +7,8 @@ module.exports = {
       loadPaths: ['public/assets'],
       baseUrl: 'https://hassaneljebyly.github.io/Bookmark-landing-page',
     }),
+    require('@fullhuman/postcss-purgecss')({
+      content: ['./**/*.html'],
+    }),
   ],
 };

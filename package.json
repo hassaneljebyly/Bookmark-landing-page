@@ -30,9 +30,10 @@
     "last 4 version"
   ],
   "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^5.0.0",
     "autoprefixer": "^10.4.16",
     "cssnano": "^6.0.3",
-    "postcss": "^8.4.33",
+    "postcss": "^8.4.35",
     "postcss-assets": "^6.0.0",
     "postcss-cli": "^11.0.0",
     "postcss-combine-media-query": "^1.0.1",
