@@ -65,15 +65,21 @@ function togglePanel(accButton, closeCurrentOpen) {
 
 // set up tabs
 TABS.forEach((tab, index) => {
-  let tabPanelID = tab.getAttribute('href').split('#')[1];
-  let tabPanel = document.getElementById(tabPanelID);
-  tabPanel.setAttribute('role', 'tabpanel');
-  tab.setAttribute('aria-controls', tabPanelID);
-  if (index === 0) {
+  const DEFAULT_TAB = document.querySelector(`a.tab[href="${window.location.hash}"]`) ?? document.querySelector('a.tab[data-default-tab]');
+  const TABPANEL_ID = tab.getAttribute('href').split('#')[1];
+  const TABPANEL = document.getElementById(TABPANEL_ID);
+  TABPANEL.setAttribute('role', 'tabpanel');
+  tab.setAttribute('aria-controls', TABPANEL_ID);
+  if (tab === DEFAULT_TAB) {
     toggleTab(tab, true);
     animateIndicator(tab);
   } else {
     toggleTab(tab, false);
+  }
+  // if no default was set then first tab is the default
+  if (!DEFAULT_TAB && index === TABS.length - 1) {
+    toggleTab(TABS[0], true);
+    animateIndicator(TABS[0]);
   }
 });
 

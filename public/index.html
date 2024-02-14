@@ -4,6 +4,23 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://hassaneljebyly.github.io/Bookmark-landing-page/public/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Frontend Mentor | Bookmark landing page">
+    <meta property="og:description"
+      content="A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.">
+    <meta property="og:image"
+      content="https://hassaneljebyly.github.io/Bookmark-landing-page/public/assets/logo-bookmark.svg">
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="hassaneljebyly.github.io">
+    <meta property="twitter:url" content="https://hassaneljebyly.github.io/article-preview-component-master/public/">
+    <meta name="twitter:title" content="Frontend Mentor | Bookmark landing page">
+    <meta name="twitter:description"
+      content="A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.">
+    <meta name="twitter:image"
+      content="https://hassaneljebyly.github.io/Bookmark-landing-page/public/assets/logo-bookmark.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,9 +36,6 @@
     <title>Frontend Mentor | Bookmark landing page</title>
   </head>
   <!-- 
-    TODO: edit link url on active tab
-    TODO: add alt
-    TODO: add aria
     TODO: head meta tags
    -->
 
@@ -110,7 +124,8 @@
             </div>
           </div>
           <div class="hero__illustration svg-back-rect">
-            <svg class="hero__illustration-svg" xmlns="http://www.w3.org/2000/svg" width="750" viewBox="0 0 750 493">
+            <svg class="hero__illustration-svg" xmlns="http://www.w3.org/2000/svg" width="750" viewBox="0 0 750 493"
+              aria-hidden="true" focusable="false">
               <g transform="translate(-9 -644)">
                 <g transform="translate(9 644)" fill="#393939" stroke="#777" stroke-width="2">
                   <rect width="750" height="493" rx="26" stroke="none" />
@@ -210,7 +225,8 @@
           <div class="tabpanel-container">
             <div class="tabpanel" id="simple_bookmarking" aria-labelledby="tab-1">
               <div class="tabpanel__columns svg-back-rect svg-back-rect--reversed">
-                <img class="tabpanel__illustration" src="./assets/illustration-features-tab-1.svg" alt="">
+                <img aria-hidden="true" focusable="false" class="tabpanel__illustration"
+                  src="./assets/illustration-features-tab-1.svg">
               </div>
               <div class="tabpanel__columns">
                 <h3 class="fs-p-500 fw-p-bold text-n-200-db | tabpanel__title">Bookmark in one click</h3>
@@ -223,7 +239,8 @@
             </div>
             <div class="tabpanel" id="speedy_searching" aria-labelledby="tab-2">
               <div class="tabpanel__columns svg-back-rect svg-back-rect--reversed">
-                <img class="tabpanel__illustration" src="./assets/illustration-features-tab-2.svg" alt="">
+                <img aria-hidden="true" focusable="false" class="tabpanel__illustration"
+                  src="./assets/illustration-features-tab-2.svg">
               </div>
               <div class="tabpanel__columns">
                 <h3 class="fs-p-500 fw-p-bold text-n-200-db | tabpanel__title">Intelligent search</h3>
@@ -236,7 +253,8 @@
             </div>
             <div class="tabpanel" id="easy_sharing" aria-labelledby="tab-3">
               <div class="tabpanel__columns svg-back-rect svg-back-rect--reversed">
-                <img class="tabpanel__illustration" src="./assets/illustration-features-tab-3.svg" alt="">
+                <img aria-hidden="true" focusable="false" class="tabpanel__illustration"
+                  src="./assets/illustration-features-tab-3.svg">
               </div>
               <div class="tabpanel__columns">
                 <h3 class="fs-p-500 fw-p-bold text-n-200-db | tabpanel__title">Share your bookmarks</h3>
@@ -260,24 +278,24 @@
           </p>
           <div class="download__cards-wrapper">
             <div class="download__cards download__cards--chrome card card--chrome bounce2">
-              <img class="card__logo" src="./assets/logo-chrome.svg" alt="">
+              <img aria-hidden="true" focusable="false" class="card__logo" src="./assets/logo-chrome.svg">
               <h3 class="card__title | fs-p-400 fw-p-bold text-n-200-db">Add to Chrome</h3>
               <p class="card__body | fs-p-300 text-n-700-gb">Minimum version 62</p>
-              <img class="card__bg-dots" src="./assets/bg-dots.svg" alt="">
+              <img aria-hidden="true" focusable="false" class="card__bg-dots" src="./assets/bg-dots.svg">
               <a class="card__cta cta-button cta-button--primary" href="#">Add & Install Extension</a>
             </div>
             <div class="download__cards download__cards--firefox card card--firefox">
-              <img class="card__logo" src="./assets/logo-firefox.svg" alt="">
+              <img aria-hidden="true" focusable="false" class="card__logo" src="./assets/logo-firefox.svg">
               <h3 class="card__title | fs-p-400 fw-p-bold text-n-200-db">Add to Firefox</h3>
               <p class="card__body | fs-p-300 text-n-700-gb">Minimum version 55</p>
-              <img class="card__bg-dots" src="./assets/bg-dots.svg" alt="">
+              <img aria-hidden="true" focusable="false" class="card__bg-dots" src="./assets/bg-dots.svg">
               <a class="card__cta cta-button cta-button--primary" href="#">Add & Install Extension</a>
             </div>
             <div class="download__cards download__cards--opera card card--opera">
-              <img class="card__logo" src="./assets/logo-opera.svg" alt="">
+              <img aria-hidden="true" focusable="false" class="card__logo" src="./assets/logo-opera.svg">
               <h3 class="card__title | fs-p-400 fw-p-bold text-n-200-db">Add to Opera</h3>
               <p class="card__body | fs-p-300 text-n-700-gb">Minimum version 46</p>
-              <img class="card__bg-dots" src="./assets/bg-dots.svg" alt="">
+              <img aria-hidden="true" focusable="false" class="card__bg-dots" src="./assets/bg-dots.svg">
               <a class="card__cta cta-button cta-button--primary" href="#">Add & Install Extension</a>
             </div>
           </div>
@@ -296,7 +314,7 @@
                 <div class="accordion__heading accordion-btn" role="button" tabindex="0"
                   aria-controls="accordion__panel-1">
                   <h3 class="accordion__title" id="accordion__title-1">What is Bookmark?</h3>
-                  <span class="accordion__icon"></span>
+                  <span class="accordion__icon" aria-hidden="true" focusable="false"></span>
                 </div>
                 <div class="accordion__content" aria-labelledby="accordion__title-1">
                   <p class="accordion__p">
@@ -309,7 +327,7 @@
                 <div class="accordion__heading accordion-btn" role="button" tabindex="0"
                   aria-controls="accordion__panel-2">
                   <h3 class="accordion__title" id="accordion__title-2">How can I request a new browser?</h3>
-                  <span class="accordion__icon"></span>
+                  <span class="accordion__icon" aria-hidden="true" focusable="false"></span>
                 </div>
                 <div class="accordion__content" aria-labelledby="accordion__title-2">
                   <p class="accordion__p">
@@ -324,7 +342,7 @@
                 <div class="accordion__heading accordion-btn" role="button" tabindex="0"
                   aria-controls="accordion__panel-3">
                   <h3 class="accordion__title" id="accordion__title-3">Is there a mobile app?</h3>
-                  <span class="accordion__icon"></span>
+                  <span class="accordion__icon" aria-hidden="true" focusable="false"></span>
                 </div>
                 <div class="accordion__content" aria-labelledby="accordion__title-3">
                   <p class="accordion__p">
@@ -338,7 +356,7 @@
                 <div class="accordion__heading accordion-btn" role="button" tabindex="0"
                   aria-controls="accordion__panel-4">
                   <h3 class="accordion__title" id="accordion__title-4">What about other Chromium browsers?</h3>
-                  <span class="accordion__icon"></span>
+                  <span class="accordion__icon" aria-hidden="true" focusable="false"></span>
                 </div>
                 <div class="accordion__content" aria-labelledby="accordion__title-4">
                   <p class="accordion__p">
@@ -362,7 +380,7 @@
               <input class="form__input" tabindex="0" aria-describedby="form-hint"
                 placeholder="Enter your email address" type="email" name="email" id="news-letter-email-input">
               <p class="form__hint" id="form-hint">Whoops, make sure It's an email</p>
-              <span class="form__error-icon"></span>
+              <span class="form__error-icon" aria-hidden="true" focusable="false"></span>
             </div>
             <button class="form__cta cta-button cta-button--red" type="submit">Contact Us</button>
           </form>
