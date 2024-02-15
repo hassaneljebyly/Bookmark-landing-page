@@ -40,7 +40,7 @@
       <div class="container header__container">
         <nav class="nav nav--primary" aria-label="Primary" id="primary_nav">
           <a class="nav__link" aria-current="page" href="/public">
-            <p class="sr-only">page logo - home page link</p>
+            <span class="sr-only">page logo - home page link</span>
             <svg class="home-logo" width="148" height="25" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
               focusable="false">
               <g fill="none" fill-rule="evenodd">
@@ -55,7 +55,7 @@
               </g>
             </svg>
           </a>
-          <ul class="nav__list" id="nav_list" aria-label="Navigation List" role="list">
+          <ul class="nav__list" id="nav_list" aria-label="Navigation List">
             <li class="nav__list-item"><a class="nav__link" href="#Features">Features</a></li>
             <li class="nav__list-item"><a class="nav__link" href="#Pricing">Pricing</a></li>
             <li class="nav__list-item"><a class="nav__link" href="#Contact">Contact</a></li>
@@ -63,24 +63,24 @@
           </ul>
           <div class="nav__btn-group" id="menu_btn">
             <button class="nav__btn nav__btn--open">
-              <p class="sr-only">open menu</p>
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="15" aria-hidden="true" focusable="false">
+              <span class="sr-only">open menu</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="15" aria-hidden="true">
                 <path fill="#242A45" fill-rule="evenodd" d="M0 0h18v3H0V0zm0 6h18v3H0V6zm0 6h18v3H0v-3z" />
               </svg>
             </button>
             <button class="nav__btn nav__btn--close">
-              <p class="sr-only">close menu</p>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" aria-hidden="true" focusable="false">
+              <span class="sr-only">close menu</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" aria-hidden="true">
                 <path fill="#FFF" fill-rule="evenodd"
                   d="M8 5.379L13.303.075l2.122 2.122L10.12 7.5l5.304 5.303-2.122 2.122L8 9.62l-5.303 5.304-2.122-2.122L5.88 7.5.575 2.197 2.697.075 8 5.38z" />
               </svg>
             </button>
           </div>
-          <ul class="nav__social-list" id="nav_social" aria-label="Social Links" role="list">
+          <ul class="nav__social-list" id="nav_social" aria-label="Social Links">
             <li class="nav__social-list-item">
               <a class="nav__link nav__link--social" href="https://facebook.com" target="_blank">
-                <p class="sr-only">facebook</p>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true" focusable="false">
+                <span class="sr-only">facebook</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true">
                   <path fill="#FFF" fill-rule="evenodd"
                     d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z" />
                 </svg>
@@ -88,8 +88,8 @@
             </li>
             <li class="nav_social-list-item">
               <a class="nav__link nav__link--social" href="https://twitter.com/home" target="_blank">
-                <p class="sr-only">twitter</p>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" aria-hidden="true" focusable="false">
+                <span class="sr-only">twitter</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" aria-hidden="true">
                   <path fill="#FFF" fill-rule="evenodd"
                     d="M24 2.557a9.83 9.83 0 0 1-2.828.775A4.932 4.932 0 0 0 23.337.608a9.864 9.864 0 0 1-3.127 1.195A4.916 4.916 0 0 0 16.616.248c-3.179 0-5.515 2.966-4.797 6.045A13.978 13.978 0 0 1 1.671 1.149a4.93 4.93 0 0 0 1.523 6.574 4.903 4.903 0 0 1-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 0 1-2.224.084 4.928 4.928 0 0 0 4.6 3.419A9.9 9.9 0 0 1 0 17.54a13.94 13.94 0 0 0 7.548 2.212c9.142 0 14.307-7.721 13.995-14.646A10.025 10.025 0 0 0 24 2.557z" />
                 </svg>
@@ -119,7 +119,7 @@
           </div>
           <div class="hero__illustration svg-back-rect">
             <svg class="hero__illustration-svg" xmlns="http://www.w3.org/2000/svg" width="750" viewBox="0 0 750 493"
-              aria-hidden="true" focusable="false">
+              aria-hidden="true">
               <g transform="translate(-9 -644)">
                 <g transform="translate(9 644)" fill="#393939" stroke="#777" stroke-width="2">
                   <rect width="750" height="493" rx="26" stroke="none" />
@@ -219,7 +219,7 @@
           <div class="tabpanel-container">
             <div class="tabpanel" id="simple_bookmarking" aria-labelledby="tab-1">
               <div class="tabpanel__columns svg-back-rect svg-back-rect--reversed">
-                <img aria-hidden="true" focusable="false" class="tabpanel__illustration"
+                <img aria-hidden="true" alt="" class="tabpanel__illustration"
                   src="./assets/illustration-features-tab-1.svg">
               </div>
               <div class="tabpanel__columns">
@@ -233,7 +233,7 @@
             </div>
             <div class="tabpanel" id="speedy_searching" aria-labelledby="tab-2">
               <div class="tabpanel__columns svg-back-rect svg-back-rect--reversed">
-                <img aria-hidden="true" focusable="false" class="tabpanel__illustration"
+                <img aria-hidden="true" alt="" class="tabpanel__illustration"
                   src="./assets/illustration-features-tab-2.svg">
               </div>
               <div class="tabpanel__columns">
@@ -247,7 +247,7 @@
             </div>
             <div class="tabpanel" id="easy_sharing" aria-labelledby="tab-3">
               <div class="tabpanel__columns svg-back-rect svg-back-rect--reversed">
-                <img aria-hidden="true" focusable="false" class="tabpanel__illustration"
+                <img aria-hidden="true" alt="" class="tabpanel__illustration"
                   src="./assets/illustration-features-tab-3.svg">
               </div>
               <div class="tabpanel__columns">
@@ -272,24 +272,24 @@
           </p>
           <div class="download__cards-wrapper">
             <div class="download__cards download__cards--chrome card card--chrome bounce2">
-              <img aria-hidden="true" focusable="false" class="card__logo" src="./assets/logo-chrome.svg">
+              <img aria-hidden="true" alt="" class="card__logo" src="./assets/logo-chrome.svg">
               <h3 class="card__title | fs-p-400 fw-p-bold text-n-200-db">Add to Chrome</h3>
               <p class="card__body | fs-p-300 text-n-700-gb">Minimum version 62</p>
-              <img aria-hidden="true" focusable="false" class="card__bg-dots" src="./assets/bg-dots.svg">
+              <img aria-hidden="true" alt="" class="card__bg-dots" src="./assets/bg-dots.svg">
               <a class="card__cta cta-button cta-button--primary" href="#">Add & Install Extension</a>
             </div>
             <div class="download__cards download__cards--firefox card card--firefox">
-              <img aria-hidden="true" focusable="false" class="card__logo" src="./assets/logo-firefox.svg">
+              <img aria-hidden="true" alt="" class="card__logo" src="./assets/logo-firefox.svg">
               <h3 class="card__title | fs-p-400 fw-p-bold text-n-200-db">Add to Firefox</h3>
               <p class="card__body | fs-p-300 text-n-700-gb">Minimum version 55</p>
-              <img aria-hidden="true" focusable="false" class="card__bg-dots" src="./assets/bg-dots.svg">
+              <img aria-hidden="true" alt="" class="card__bg-dots" src="./assets/bg-dots.svg">
               <a class="card__cta cta-button cta-button--primary" href="#">Add & Install Extension</a>
             </div>
             <div class="download__cards download__cards--opera card card--opera">
-              <img aria-hidden="true" focusable="false" class="card__logo" src="./assets/logo-opera.svg">
+              <img aria-hidden="true" alt="" class="card__logo" src="./assets/logo-opera.svg">
               <h3 class="card__title | fs-p-400 fw-p-bold text-n-200-db">Add to Opera</h3>
               <p class="card__body | fs-p-300 text-n-700-gb">Minimum version 46</p>
-              <img aria-hidden="true" focusable="false" class="card__bg-dots" src="./assets/bg-dots.svg">
+              <img aria-hidden="true" alt="" class="card__bg-dots" src="./assets/bg-dots.svg">
               <a class="card__cta cta-button cta-button--primary" href="#">Add & Install Extension</a>
             </div>
           </div>
@@ -308,7 +308,7 @@
                 <div class="accordion__heading accordion-btn" role="button" tabindex="0"
                   aria-controls="accordion__panel-1">
                   <h3 class="accordion__title" id="accordion__title-1">What is Bookmark?</h3>
-                  <span class="accordion__icon" aria-hidden="true" focusable="false"></span>
+                  <span class="accordion__icon" aria-hidden="true"></span>
                 </div>
                 <div class="accordion__content" aria-labelledby="accordion__title-1">
                   <p class="accordion__p">
@@ -321,7 +321,7 @@
                 <div class="accordion__heading accordion-btn" role="button" tabindex="0"
                   aria-controls="accordion__panel-2">
                   <h3 class="accordion__title" id="accordion__title-2">How can I request a new browser?</h3>
-                  <span class="accordion__icon" aria-hidden="true" focusable="false"></span>
+                  <span class="accordion__icon" aria-hidden="true"></span>
                 </div>
                 <div class="accordion__content" aria-labelledby="accordion__title-2">
                   <p class="accordion__p">
@@ -336,7 +336,7 @@
                 <div class="accordion__heading accordion-btn" role="button" tabindex="0"
                   aria-controls="accordion__panel-3">
                   <h3 class="accordion__title" id="accordion__title-3">Is there a mobile app?</h3>
-                  <span class="accordion__icon" aria-hidden="true" focusable="false"></span>
+                  <span class="accordion__icon" aria-hidden="true"></span>
                 </div>
                 <div class="accordion__content" aria-labelledby="accordion__title-3">
                   <p class="accordion__p">
@@ -350,7 +350,7 @@
                 <div class="accordion__heading accordion-btn" role="button" tabindex="0"
                   aria-controls="accordion__panel-4">
                   <h3 class="accordion__title" id="accordion__title-4">What about other Chromium browsers?</h3>
-                  <span class="accordion__icon" aria-hidden="true" focusable="false"></span>
+                  <span class="accordion__icon" aria-hidden="true"></span>
                 </div>
                 <div class="accordion__content" aria-labelledby="accordion__title-4">
                   <p class="accordion__p">
@@ -374,7 +374,7 @@
               <input class="form__input" tabindex="0" aria-describedby="form-hint"
                 placeholder="Enter your email address" type="email" name="email" id="news-letter-email-input">
               <p class="form__hint" id="form-hint">Whoops, make sure It's an email</p>
-              <span class="form__error-icon" aria-hidden="true" focusable="false"></span>
+              <span class="form__error-icon" aria-hidden="true"></span>
             </div>
             <button class="form__cta cta-button cta-button--red" type="submit">Contact Us</button>
           </form>
@@ -385,7 +385,7 @@
       <div class="container footer__container">
         <nav class="nav nav--footer" aria-label="Footer navigation">
           <a class="nav__link nav__link--logo" aria-current="page" href="/public">
-            <p class="sr-only">page logo - home page link</p>
+            <span class="sr-only">page logo - home page link</span>
             <svg class="home-logo" width="148" height="25" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
               focusable="false">
               <g fill="none" fill-rule="evenodd">
@@ -400,7 +400,7 @@
               </g>
             </svg>
           </a>
-          <ul class="nav__list" id="nav_list" aria-label="Navigation List" role="list">
+          <ul class="nav__list" id="nav_list--footer" aria-label="Navigation List">
             <li class="nav__list-item"><a class="nav__link" href="#Features">Features</a></li>
             <li class="nav__list-item"><a class="nav__link" href="#Pricing">Pricing</a></li>
             <li class="nav__list-item"><a class="nav__link" href="#Contact">Contact</a></li>
@@ -408,15 +408,15 @@
 
           <div class="nav__footer-social">
             <a class="nav__link nav__link--social-footer" href="https://facebook.com" target="_blank">
-              <p class="sr-only">facebook</p>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true" focusable="false">
+              <span class="sr-only">facebook</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true">
                 <path fill="var(--_footer-social-fill)" fill-rule="evenodd"
                   d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z" />
               </svg>
             </a>
             <a class="nav__link nav__link--social-footer" href="https://twitter.com/home" target="_blank">
-              <p class="sr-only">twitter</p>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" aria-hidden="true" focusable="false">
+              <span class="sr-only">twitter</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" aria-hidden="true">
                 <path fill="var(--_footer-social-fill)" fill-rule="evenodd"
                   d="M24 2.557a9.83 9.83 0 0 1-2.828.775A4.932 4.932 0 0 0 23.337.608a9.864 9.864 0 0 1-3.127 1.195A4.916 4.916 0 0 0 16.616.248c-3.179 0-5.515 2.966-4.797 6.045A13.978 13.978 0 0 1 1.671 1.149a4.93 4.93 0 0 0 1.523 6.574 4.903 4.903 0 0 1-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 0 1-2.224.084 4.928 4.928 0 0 0 4.6 3.419A9.9 9.9 0 0 1 0 17.54a13.94 13.94 0 0 0 7.548 2.212c9.142 0 14.307-7.721 13.995-14.646A10.025 10.025 0 0 0 24 2.557z" />
               </svg>

@@ -64,12 +64,14 @@ function togglePanel(accButton, closeCurrentOpen) {
 }
 
 // set up tabs
+TAB_LIST.setAttribute('role', 'tablist');
 TABS.forEach((tab, index) => {
   const DEFAULT_TAB = document.querySelector(`a.tab[href="${window.location.hash}"]`) ?? document.querySelector('a.tab[data-default-tab]');
   const TABPANEL_ID = tab.getAttribute('href').split('#')[1];
   const TABPANEL = document.getElementById(TABPANEL_ID);
   TABPANEL.setAttribute('role', 'tabpanel');
   tab.setAttribute('aria-controls', TABPANEL_ID);
+  tab.setAttribute('role', 'tab');
   if (tab === DEFAULT_TAB) {
     toggleTab(tab, true);
     animateIndicator(tab);
@@ -149,8 +151,6 @@ function toggleTab(tab, toggle) {
   targetPanel.setAttribute('aria-hidden', !toggle);
   tab.setAttribute('tabindex', toggle ? 0 : -1);
   targetPanel.setAttribute('tabindex', toggle ? 0 : -1);
-  // get that see more button
-  targetPanel.querySelector('a').setAttribute('tabindex', toggle ? 0 : -1);
 }
 
 function animateIndicator(targetedTab) {
